@@ -22,14 +22,14 @@ interface GuidoModule extends EmscriptenModule {
     PianoRollType: EnumToObject<typeof PianoRollType>;
     RProportional: new () => ReducedProportional;
     UnboundTypeError: new (...args: ConstructorParameters<typeof Error>) => UnboundTypeError;
-    // ar2MIDIFile(): any;
+    ar2MIDIFile(): number;
     flushPendingDeletes(): void;
     getInheritedInstanceCount(): number;
     getLiveInheritedInstances(): any[];
 }
 declare const GuidoModule: {
-    (options?: Partial<EmscriptenModule & { ENVIRONMENT: Emscripten.EnvironmentType }>): GuidoModule;
-    new (options?: Partial<EmscriptenModule & { ENVIRONMENT: Emscripten.EnvironmentType }>): GuidoModule;
+    (options?: Partial<EmscriptenModule & { ENVIRONMENT: Emscripten.EnvironmentType }>): Promise<GuidoModule>;
+    new (options?: Partial<EmscriptenModule & { ENVIRONMENT: Emscripten.EnvironmentType }>): Promise<GuidoModule>;
 };
 
 export = GuidoModule;
