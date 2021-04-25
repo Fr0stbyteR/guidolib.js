@@ -4,13 +4,26 @@ declare var GuidoModule : any;
 //--------------------------------------------------------------
 declare enum GuidoMapping {}
 declare enum GuidoErrCode {}
+type EnumToObject<T extends Record<string, any>> = { [key in keyof Omit<T, number>]: { value: T[key]; }; } & { values: { [key: number]: { value: number } } };
 
-interface ARHandler     {}
-interface GRHandler     {}
+interface ARHandler extends ClassHandle {}
+interface GRHandler extends ClassHandle {}
 
-interface GuidoParser   {}
-interface GuidoStream   {}
-interface VGDevice      {}
+interface GuidoParser extends ClassHandle {}
+interface GuidoStream extends ClassHandle {}
+interface VGDevice extends ClassHandle {}
+
+type $ARHandler = number;
+type $GRHandler = number;
+type $GuidoParser = number;
+type $GuidoStream = number;
+type $VGDevice = number;
+type $PianoRoll = number;
+type $ReducedProportional = number;
+
+interface BindingError extends Error {}
+interface InternalError extends Error {}
+interface UnboundTypeError extends Error {}
 
 interface GuidoInitDesc {
     graphicDevice:  VGDevice;
@@ -291,7 +304,7 @@ interface LimitParams {
     highPitch   : number;    
 }
 
-interface PianoRoll {}
+interface PianoRoll extends ClassHandle {}
 
 interface GUIDOPianoRollAdapter {
 	constructor: GUIDOPianoRollAdapter;
@@ -319,7 +332,7 @@ interface GUIDOPianoRollAdapter {
     javascriptExport(pr: PianoRoll, width: number, height: number): GuidoErrCode;
 }
 
-interface ReducedProportional {}
+interface ReducedProportional extends ClassHandle {}
 
 interface GUIDOReducedProportionalAdapter {
 	constructor: GUIDOReducedProportionalAdapter;
