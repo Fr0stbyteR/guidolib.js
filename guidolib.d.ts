@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/triple-slash-reference */
 /// <reference path="./libGUIDOEngine.d.ts"/>
 /// <reference path="./guidoengine.ts"/>
-/// <reference path="./node_modules/@types/emscripten/index.d.ts"/>
+/// <reference types="@types/emscripten"/>
 /// <reference path="./embind.d.ts"/>
 
 type EnumToObject<T extends Record<string, any>> = { [key in keyof Omit<T, number>]: { value: T[key]; }; } & { values: { [key: number]: { value: number } } };
