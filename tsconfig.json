@@ -15,7 +15,7 @@
     "exclude": [
         "dist",
         "node_modules",
-        "libfaust-wasm",
+        "libguido-wasm",
         "test",
         "assets"
     ]

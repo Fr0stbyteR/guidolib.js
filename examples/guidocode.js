@@ -8,10 +8,10 @@
 	function processGMNDiv(engine, div, parser) {
 		const content = div.innerHTML.replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 		const ar = engine.string2AR(parser, content);
-		// var gr = guidoEngine.ar2gr(ar);
-		// div.innerHTML = guidoEngine.gr2SVG(gr, 1, true, 0);
+		var gr = guidoEngine.ar2gr(ar);
+		div.innerHTML = guidoEngine.gr2SVG(gr, 1, true, 0);
 		guidoEngine.freeAR(ar);
-		// guidoEngine.freeGR(gr);
+		guidoEngine.freeGR(gr);
 	}
 	
 	/**

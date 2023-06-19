@@ -1,4 +1,4 @@
-///<reference path="libGUIDOEngine.d.ts"/>
+///<reference path="../libguido-wasm/libGUIDOEngine.d.ts"/>
 //----------------------------------------------------------------------------
 // GUIDOEngine interface
 //----------------------------------------------------------------------------

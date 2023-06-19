@@ -1,5 +1,5 @@
-import factoryFn from "../guidolib-wasm/libGUIDOEngine.cjs";
-import wasmBinary from "../guidolib-wasm/libGUIDOEngine.wasm";
+import factoryFn from "../libguido-wasm/libGUIDOEngine.cjs";
+import wasmBinary from "../libguido-wasm/libGUIDOEngine.wasm";
 
 export const GuidoModuleFactoryFn = factoryFn;
 export const GuidoModuleFactoryWasm = wasmBinary;

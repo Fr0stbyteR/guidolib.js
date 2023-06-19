@@ -8,4 +8,4 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // @ts-ignore
 const __filename = fileURLToPath(import.meta.url);
 
-rmSync(path.join(__dirname, "./libGUIDOEngine.cjs"));
+rmSync(path.join(__dirname, "./libguido-wasm/libGUIDOEngine.cjs"));
